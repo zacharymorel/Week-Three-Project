@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+button {
+  width: 25%;
+  padding: 0;
+  border: 1px solid white;
+  background: rgb(97, 179, 79)	;
+  padding: 20px 8px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+ }
+
+button.placeHolder {
+  width: 75%;
+}
+
+button.mathColor {
+  color: rgb(85, 87, 84);
+  background: rgb(129,	192,	117	);
+}
