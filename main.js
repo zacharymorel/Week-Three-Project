@@ -32,24 +32,22 @@ equalsButton.addEventListener('click', () => {
   console.log(sign);
 
   if (sign === '+') {
-    answer = parseInt(optOne) + parseInt(optTwo);
+    answer = parseInt(optOne, 10) + parseInt(optTwo, 10);
   }
+  console.log(answer);
   if (sign === '-') {
-    answer = parseInt(optOne) - parseInt(optTwo);
+    answer = parseInt(optOne, 10) - parseInt(optTwo, 10);
   }
   if (sign === 'X') {
-    answer = parseInt(optOne) * parseInt(optTwo);
+    answer = parseInt(optOne, 10) * parseInt(optTwo, 10);
   }
   if (sign === '/') {
-    answer = parseInt(optOne) / parseInt(optTwo);
+    answer = parseInt(optOne, 10) / parseInt(optTwo, 10);
   }
 
-  console.log(answer);
-
-  answer = `${answer}`;
+  answer += '';
 
   placeHolder.textContent = answer;
-
 
   optOne = '';
   optTwo = '';
