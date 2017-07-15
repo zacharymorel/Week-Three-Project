@@ -9,6 +9,8 @@ let sign = '';
 let equalsButton = document.querySelector('.equals');
 let answer = '';
 
+let clearButton = document.querySelector('.clear');
+
 buttons.forEach((currentNumber) => {
   // Exclude PlaceHolder, C, =
   currentNumber.addEventListener('click', () => {
@@ -45,11 +47,18 @@ equalsButton.addEventListener('click', () => {
     answer = parseInt(optOne, 10) / parseInt(optTwo, 10);
   }
 
-  answer += '';
+  answer = `${answer}`;
 
   placeHolder.textContent = answer;
 
+  console.log(answer);
+
+});
+
+clearButton.addEventListener('click', ()=>{
   optOne = '';
   optTwo = '';
   sign = '';
+  //make the JS varabiles Clear completely.
+  placeHolder.textContent = '';
 });
