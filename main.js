@@ -14,17 +14,19 @@ let clearButton = document.querySelector('.clear');
 buttons.forEach((currentNumber) => {
   // Exclude PlaceHolder, C, =
   currentNumber.addEventListener('click', () => {
-
-    let text = currentNumber.innerText;
-    placeHolder.textContent += text;
-      if(sign === true) {
-        optTwo += text;
+    let value = currentNumber.innerText;
+    placeHolder.textContent += value;
+      if(sign != '') {
+        optTwo += value;
+        console.log(optTwo);
       }
-      else if ((text === '+') || (text === '-') || (text === 'X') || (text === '/')) {
-        sign += text;
+      else if ((value === '+') || (value === '-') || (value === 'X') || (value === '/')) {
+        sign = value;
+        console.log(sign);
       }
       else {
-        optOne += text;
+        optOne += value;
+        console.log(optOne);
       }
   });
 });
@@ -34,17 +36,17 @@ equalsButton.addEventListener('click', () => {
   console.log(sign);
 
   if (sign === '+') {
-    answer = parseInt(optOne, 10) + parseInt(optTwo, 10);
+    answer = Number(optOne) + Number(optTwo);
   }
   console.log(answer);
   if (sign === '-') {
-    answer = parseInt(optOne, 10) - parseInt(optTwo, 10);
+    answer = Number(optOne) - Number(optTwo);
   }
   if (sign === 'X') {
-    answer = parseInt(optOne, 10) * parseInt(optTwo, 10);
+    answer = Number(optOne) * Number(optTwo);
   }
   if (sign === '/') {
-    answer = parseInt(optOne, 10) / parseInt(optTwo, 10);
+    answer = Number(optOne) / Number(optTwo);
   }
 
   answer = `${answer}`;
